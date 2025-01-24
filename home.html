@@ -680,6 +680,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+						  document.addEventListener('contextmenu', function(e) {
+				e.preventDefault();
+			  });
+
+			  document.addEventListener('keydown', function(e) {
+				if ((e.ctrlKey || e.metaKey) && e.key === 'u') {
+				  e.preventDefault();
+				}
+				if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+				  e.preventDefault();
+				}
+				if (e.keyCode === 123) {
+				  e.preventDefault();
+				}
+			  });
 </script>
 
 </body>
